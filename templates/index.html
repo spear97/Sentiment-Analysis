@@ -1,32 +1,49 @@
+<!DOCTYPE html>
 <html>
 <head>
+    <!-- Include Bootstrap CSS from CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Include custom JavaScript file -->
     <script src="./static/mywebscript.js"></script>
+    
+    <!-- Define custom CSS styles -->
     <style>
         .center-heading {
             text-align: center;
         }
     </style>
+
 </head>
 <body>
+    <!-- Bootstrap card element for styling -->
     <div class="card">
         <div class="card-body">
+            <!-- Main Heading -->
             <h1 class="center-heading">NLP - Sentiment Analysis using BERT</h1> 
             <div style="padding: 25px 25px 25px 25px;">
-            <h2 class="mb-3">
-                <label class="form-label">Please enter the text to be analyzed</label>
-                <input type="textarea" class="form-control" id="textToAnalyze">
-            </h2>
-
-            <div style="padding: 25px 25px 25px 25px;">
-                <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
+                <!-- Input for text to analyze -->
+                <h2 class="mb-3">
+                    <label class="form-label">Please enter the text to be analyzed</label>
+                    <input type="textarea" class="form-control" id="textToAnalyze">
+                </h2>
+    
+                <!-- Button to run sentiment analysis -->
+                <div style="padding: 25px 25px 25px 25px;">
+                    <button onclick="RunSentimentAnalysis()" class="btn btn-secondary">Run Sentiment Analysis</button>
+                </div>
+                
+                <!-- Divider -->
+                <div style="padding: 25px 25px 25px 25px;"></div>
+                
+                <!-- Section for displaying result of sentiment analysis -->
+                <h2 class="mb-3">
+                    <label class="form-label">Result of Sentiment Analysis</label>
+                </h2>
+    
+                <div id="system_response" style="padding: 25px 25px 25px 25px;"></div>
             </div>
-            <div style="padding: 25px 25px 25px 25px;"></div>
-            <h2 class="mb-3">
-                <label class="form-label">Result of Sentiment Analysis</label>
-            </h2>
-
-            <div id="system_response" style="padding: 25px 25px 25px 25px;"></div>
         </div>
     </div>
 </body>
+</html>
